@@ -11,4 +11,16 @@ function findFirstRepeated(gifts) {
   return -1
 }
 
+function findFirstRepeatedUsingSet(gifts) {
+  const uniqueGifts = new Set()
+
+  for (const gift of gifts) {
+    if (!uniqueGifts.add(gift)) {
+      return gift
+    }
+  }
+
+  return -1
+}
+
 export { findFirstRepeated }
